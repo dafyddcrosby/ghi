@@ -6,19 +6,19 @@ GitHub Issues on the command line. Use your `$EDITOR`, not your browser.
 
 ## Install
 
-Via brew ([latest stable release](https://github.com/stephencelis/ghi/releases/latest)):
+Via brew ([latest stable release](https://github.com/drazisil/ghi/releases/latest)):
 ``` sh
 brew install ghi
 ```
 
-Via gem ([latest stable release](https://github.com/stephencelis/ghi/releases/latest)):
+Via gem ([latest stable release](https://github.com/drazisil/ghi/releases/latest)):
 ``` sh
 gem install ghi
 ```
 
 Via curl (latest bleeding-edge versions, may not be stable):
 ``` sh
-curl -sL https://raw.githubusercontent.com/stephencelis/ghi/master/ghi > ghi && \
+curl -sL https://raw.githubusercontent.com/drazisil/ghi/master/ghi > ghi && \
 chmod 755 ghi && \
 mv ghi /usr/local/bin
 ```
@@ -57,7 +57,7 @@ You may get a strange error if you use SourceTree, similar to [#275](https://git
 
 ## Contributing
 
-If you're looking for a place to start, there are [issues we need help with](https://github.com/stephencelis/ghi/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)!
+If you're looking for a place to start, there are [issues we need help with](https://github.com/stephencelis/ghi/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) and [newer issues we need help with](https://github.com/drazisil/ghi/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)!
 
 Once you have an idea of what you want to do, there is a section in the [wiki](https://github.com/stephencelis/ghi/wiki/Contributing) to provide more detailed information but the basic steps are as follows.
 
