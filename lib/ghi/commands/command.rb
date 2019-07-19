@@ -100,7 +100,7 @@ GitHub repository or by appending your command with the user/repo:
       end
 
       def issue
-        return @issue if defined? @issue
+        return @issue.to_i if defined? @issue
         if index = args.index { |arg| /^\d+$/ === arg }
           @issue = args.delete_at index
         else
