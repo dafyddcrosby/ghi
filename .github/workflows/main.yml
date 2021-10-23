@@ -22,16 +22,14 @@ jobs:
       - name: Tests
         run: | 
             mkdir /tmp/test-results
-            TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
             
             bundle exec rspec --format documentation \
                             --format RspecJunitFormatter \
                             --out /tmp/test-results/rspec.xml \
-                            --format progress \
-                            "${TEST_FILES}"
+                            --format progress 
 
       - name: Artifact creation
         uses: actions/upload-artifact@v1
         with:
           name: Test results
-          path: /tmp/test-results
+          path: /tmp/test-results/
