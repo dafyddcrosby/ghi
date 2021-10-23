@@ -15,7 +15,9 @@ jobs:
           ruby-version: '2.6' # Version range or exact version of a Ruby version to use, using semvers version range syntax.
 
       - name: install deps
-        run: bundle install --jobs=4 --retry=3 --path vendor/bundle
+        run: |
+          bundle update
+          bundle install --jobs=4 --retry=3 --path vendor/bundle
 
       - name: Tests
         run: | 
