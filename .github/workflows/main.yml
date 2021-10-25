@@ -1,0 +1,41 @@
+on:
+  - push
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repo 
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6' # Version range or exact version of a Ruby version to use, using semvers version range syntax.
+
+      - name: install deps
+        run: |
+          bundle update
+          bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+      - name: Tests
+        run: | 
+            mkdir /tmp/test-results
+            
+            bundle exec rspec --format documentation \
+                            --format RspecJunitFormatter \
+                            --out /tmp/test-results/rspec.xml \
+                            --format progress 
+      - name: Codecov
+        # You may pin to the exact commit or the version.
+        # uses: codecov/codecov-action@f32b3a3741e1053eb607407145bc9619351dc93b
+        uses: codecov/codecov-action@v2.1.0
+        with:
+          verbose: true
+
+      - name: Artifact creation
+        uses: actions/upload-artifact@v1
+        with:
+          name: Test results
+          path: /tmp/test-results/
