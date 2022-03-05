@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clone repo 
+      - name: Clone repo
         uses: actions/checkout@v2
 
       - uses: ruby/setup-ruby@v1.99.0
@@ -20,13 +20,13 @@ jobs:
           bundle install --jobs=4 --retry=3 --path vendor/bundle
 
       - name: Tests
-        run: | 
+        run: |
             mkdir /tmp/test-results
-            
+
             bundle exec rspec --format documentation \
                             --format RspecJunitFormatter \
                             --out /tmp/test-results/rspec.xml \
-                            --format progress 
+                            --format progress
       - name: Codecov
         # You may pin to the exact commit or the version.
         # uses: codecov/codecov-action@f32b3a3741e1053eb607407145bc9619351dc93b

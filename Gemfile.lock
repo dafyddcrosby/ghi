@@ -7,9 +7,6 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    codecov (0.1.21)
-      json
-      simplecov
     diff-lcs (1.5.0)
     docile (1.4.0)
     hpricot (0.8.6)
@@ -48,7 +45,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  codecov (~> 0.1.10)
   ghi!
   json (= 2.3.0)
   rake
