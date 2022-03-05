@@ -8,4 +8,5 @@ group :test do
   gem "rspec_junit_formatter", "~> 0.3.0"
   gem "rspec", "~> 3.6"
   gem "simplecov", "~> 0.21.2"
+  gem "simplecov-cobertura", "~> 2.1.0"
 end
