@@ -5,7 +5,8 @@ gemspec
 gem "json", "= 2.3.0"
 
 group :test do
-  gem "codecov", "~> 0.1.10"
   gem "rspec_junit_formatter", "~> 0.3.0"
   gem "rspec", "~> 3.6"
+  gem "simplecov", "~> 0.21.2"
+  gem "simplecov-cobertura", "~> 2.1.0"
 end
