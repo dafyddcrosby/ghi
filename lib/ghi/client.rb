@@ -97,7 +97,10 @@ module GHI
     def request method, path, options
       path = "/api/v3#{path}" if HOST != DEFAULT_HOST
 
-      path = URI.escape path
+      # puts "\n 1#{path}\n"
+      # path = CGI.escape path
+      # puts "\n 2#{path}\n"
+
       if params = options[:params] and !params.empty?
         q = params.map { |k, v| "#{CGI.escape k.to_s}=#{CGI.escape v.to_s}" }
         path += "?#{q.join '&'}"
