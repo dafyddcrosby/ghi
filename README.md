@@ -2,7 +2,7 @@
 
 GitHub Issues on the command line. Use your `$EDITOR`, not your browser.
 
-`ghi` was originally created by [Stephen Celis](https://github.com/stephencelis), and is now maintained by [Joe Becher](https://github.com/drazisil).
+`ghi` was originally created by [Stephen Celis](https://github.com/stephencelis), and is now maintained by [Drazi Crendraven](https://github.com/drazisil).
 
 ## Install
 
